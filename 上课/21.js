@@ -124,8 +124,6 @@ app.post('/update', function (req, res) {
         }
         res.redirect('/')
     })
-
-
 })
 
 
