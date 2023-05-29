@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% var school='东华理工大学' 
+    var islogin=false 
+    var students=[{ name: '张三' , age: 20 }, { name: '李四' , age: 10 }, {
+        name: '王五' , age: 40 }]
+    var citys=['南昌','南京','广州','上海']    
+        %>
+        <h1>ejs演示</h1>
+        <h2>hello <%=school%>
+        </h2>
+        <%if(islogin){%>
+            <button>已登录</button>
+            <%}else{%>
+                <button>未登录</button>
+                <% }%>
+                    <table border="1">
+                        <tr>
+                            <th>姓名</th>
+                            <th>年龄</th>
+                        </tr>
+                        <% for(var i=0;i< students.length;i++){ %>
+                            <tr>
+                                <th>
+                                    <%=students[i].name%>
+                                </th>
+                                <th>
+                                    <%=students[i].age%>
+                                </th>
+                            </tr>
+                            <%}%>
+                    </table>
+                    <hr>
+                    <%for(var j=0;j<citys.length;j++){%>
+            <a href=""><%=citys[j]%></a>
+            <%}%>
+        
+</body>
+
+</html>

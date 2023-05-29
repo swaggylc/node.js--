@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 80%;
+            font-size: 26px;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>学生信息表</h1>
+        <table border="1">
+            <tr>
+                <th>id</th>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>学院</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+            <% for(i=0;i<students.length;i++){ %>
+                <tr>
+                    <td>
+                        <%=students[i].id%>
+                    </td>
+                    <td>
+                        <%=students[i].idnum%>
+                    </td>
+                    <td>
+                        <%=students[i].name%>
+                    </td>
+                    <td>
+                        <%=students[i].xueyuan%>
+                    </td>
+                    <td>
+                        <%=students[i].age%>
+                    </td>
+                    <td>
+                        <%=students[i].gender%>
+                    </td>
+                    <td>
+                        <a href="/delStu?id=<%=students[i].id%>">删除</a>
+                        <a href="/updateStu?id=<%=students[i].id%>">修改</a>
+                    </td>
+                </tr>
+                <% }%>
+        </table>
+        <a href="/add">添加数据</a>
+
+    </center>
+</body>
+
+</html>
